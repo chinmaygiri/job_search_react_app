@@ -43,6 +43,8 @@ const options = {
         setLoading(true);
         fetchData();
     }
+
+    return { data, isloading, error, refetch };
 }
 
 export default useFetch;
