@@ -33,4 +33,16 @@ const options = {
             setLoading(false);
         }
     }
+    
+
+    useEffect(() => {
+        fetchData();
+    }, []);
+
+    const refetch = () => {
+        setLoading(true);
+        fetchData();
     }
+}
+
+export default useFetch;
