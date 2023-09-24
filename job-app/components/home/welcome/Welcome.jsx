@@ -1,5 +1,5 @@
 import { useState} from 'react';
-import { View, Text, TextInput, TouchableOpacity, FlatList } from 'react-native';
+import { View, Text, TextInput, TouchableOpacity, FlatList, Image} from 'react-native';
 import { useRouter } from 'expo-router';
 
 
@@ -25,7 +25,16 @@ const Welcome = () => {
         placeholder="What are you looking for?"
       />
       </View>  
+
+      <TouchableOpacity style={styles.searchBtn} onPress={() => router.push('/search')}>
+        <Image
+          source={icons.search}
+          resizeMode="contain"
+          style={styles.searchBtnImage}
+        />
+      </TouchableOpacity>
      </View>
+
     </View>
   )
 }
